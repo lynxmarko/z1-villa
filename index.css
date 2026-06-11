@@ -800,7 +800,7 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
   margin: 0 auto;
   padding: 0 40px;
   display: grid;
-  grid-template-columns: 1fr 1.6fr; /* Expanded visual column share */
+  grid-template-columns: 1fr 2.2fr; /* Expanded visual column share for massive images */
   gap: 60px;
   align-items: center;
 }
@@ -956,7 +956,8 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
 .zones-image-viewport {
   position: relative;
   width: 100%;
-  aspect-ratio: 16/10; /* Immersive landscape view */
+  height: 80vh; /* Locked high-height for massive architectural scale */
+  aspect-ratio: auto; /* Overrides default aspects */
   overflow: hidden;
   border-radius: var(--radius-md);
   box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
@@ -1186,6 +1187,11 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
   
   .zones-info-panel {
     min-height: auto;
+  }
+
+  .zones-image-viewport {
+    height: auto;
+    aspect-ratio: 4/3; /* Restore standard layout ratios when elements stack */
   }
 }
 
