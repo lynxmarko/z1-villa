@@ -781,186 +781,32 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
 }
 
 /* ==========================================================================
-   ZONES EXPLORER SECTION (Stunning Dashboard Layout)
+   ZONES EXPLORER SECTION (Cinematic Full-Bleed Console Layout)
    ========================================================================== */
 
 .zones-explorer-section {
   position: relative;
   width: 100%;
-  min-height: 100vh;
+  height: 100vh; /* Full viewport height */
   background-color: #0b0a0a !important;
   color: #ffffff !important;
   overflow: hidden;
-  padding: 100px 0;
 }
 
-.zones-outer-container {
-  width: 100%;
-  max-width: var(--container-max);
-  margin: 0 auto;
-  padding: 0 40px;
-  display: grid;
-  grid-template-columns: 1fr 2.2fr; /* Expanded visual column share for massive images */
-  gap: 60px;
-  align-items: center;
-}
-
-/* Left Panel */
-.zones-info-panel {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  min-height: 80vh;
-}
-
-.zones-sticky-header {
-  margin-bottom: 40px;
-}
-
-.zones-main-title {
-  font-family: var(--font-serif);
-  font-size: clamp(2rem, 4vw, 3rem);
-  font-weight: 400;
-  line-height: 1.2;
-  margin-top: 8px;
-  margin-bottom: 16px;
-  color: #fff;
-}
-
-.zones-main-desc {
-  font-family: var(--font-sans);
-  font-size: 0.95rem;
-  font-weight: 300;
-  opacity: 0.6;
-}
-
-/* Dynamic Text Content */
-.zones-dynamic-content-box {
-  position: relative;
-  min-height: 240px;
-  height: 240px; /* Lock height on desktop to prevent layout shifting */
-  margin-bottom: 40px;
-}
-
-.zone-details {
+/* Full-bleed background visual viewports */
+.zones-visual-panel {
   position: absolute;
-  top: 0;
-  left: 0;
+  inset: 0;
   width: 100%;
   height: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(15px);
-  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
-  pointer-events: none;
-}
-
-.zone-details.active {
-  position: absolute; /* Keep absolute to prevent taking document flow height */
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-
-/* Fallback for mobile to prevent overflow on text wrapping */
-@media (max-width: 768px) {
-  .zones-dynamic-content-box {
-    height: auto;
-    min-height: 280px;
-  }
-  .zone-details.active {
-    position: relative; /* Let content flow on mobile viewport where stacking is standard */
-  }
-}
-
-.zone-tagline {
-  font-family: var(--font-serif);
-  font-style: italic;
-  font-size: 1.05rem;
-  color: var(--accent-gold);
-  display: block;
-  margin-bottom: 12px;
-}
-
-.zone-title {
-  font-family: var(--font-serif);
-  font-size: 1.8rem;
-  font-weight: 500;
-  margin-bottom: 16px;
-  color: #fff;
-}
-
-.zone-desc {
-  font-family: var(--font-sans);
-  font-size: 0.96rem;
-  font-weight: 300;
-  line-height: 1.6;
-  opacity: 0.8;
-  margin-bottom: 20px;
-}
-
-.zone-meta {
-  font-family: var(--font-sans);
-  font-size: 0.72rem;
-  font-weight: 500;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: rgba(255,255,255,0.4);
-  border-top: 1px solid rgba(255,255,255,0.10);
-  padding-top: 12px;
-  display: inline-block;
-}
-
-/* Zone Tabs Menu */
-.zones-menu {
-  list-style: none;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 12px;
-  border-top: 1px solid rgba(255,255,255,0.1);
-  padding-top: 24px;
-}
-
-.zones-menu-item {
-  font-family: var(--font-sans);
-  font-size: 0.82rem;
-  font-weight: 400;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
-  cursor: pointer;
-  padding: 16px 20px;
-  background-color: transparent;
-  border: 1px solid rgba(255, 255, 255, 0.05);
-  transition: all var(--transition-fast);
-}
-
-.zones-menu-item:hover {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.2);
-  background-color: rgba(255, 255, 255, 0.02);
-}
-
-.zones-menu-item.active {
-  color: var(--accent-gold);
-  border-color: var(--accent-gold);
-  background-color: rgba(154, 123, 80, 0.04);
-}
-
-/* Right Panel: Viewport Display */
-.zones-visual-panel {
-  width: 100%;
+  z-index: 1;
 }
 
 .zones-image-viewport {
   position: relative;
   width: 100%;
-  height: 80vh; /* Locked high-height for massive architectural scale */
-  aspect-ratio: auto; /* Overrides default aspects */
+  height: 100%;
   overflow: hidden;
-  border-radius: var(--radius-md);
-  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.5);
   background-color: #121212;
 }
 
@@ -969,8 +815,8 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
   inset: 0;
   opacity: 0;
   visibility: hidden;
-  transform: scale(1.05);
-  transition: opacity 0.8s ease, transform 0.8s ease, visibility 0.8s ease;
+  transform: scale(1.03);
+  transition: opacity 1s cubic-bezier(0.25, 1, 0.5, 1), transform 1s cubic-bezier(0.25, 1, 0.5, 1), visibility 1s cubic-bezier(0.25, 1, 0.5, 1);
 }
 
 .zone-image-slide.active {
@@ -983,6 +829,173 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Grid layout overlaid on top of visual background */
+.zones-outer-container {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0 80px;
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Equal columns for left info / right tabs alignment */
+  gap: 80px;
+  align-items: center;
+  /* Visual backing gradient */
+  background: linear-gradient(90deg, 
+              rgba(8, 7, 7, 0.88) 0%, 
+              rgba(8, 7, 7, 0.25) 50%, 
+              rgba(8, 7, 7, 0.75) 100%);
+}
+
+/* Left Panel: Glass content block */
+.zones-info-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 480px;
+  background-color: rgba(8, 7, 7, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 48px;
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+}
+
+.zones-sticky-header {
+  margin-bottom: 28px;
+}
+
+.zones-main-title {
+  font-family: var(--font-serif);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 400;
+  line-height: 1.2;
+  margin-top: 6px;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.zones-main-desc {
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 300;
+  opacity: 0.65;
+  line-height: 1.5;
+}
+
+/* Dynamic details with locked height */
+.zones-dynamic-content-box {
+  position: relative;
+  min-height: 200px;
+  height: 200px; /* Lock height on desktop */
+  margin-bottom: 24px;
+}
+
+.zone-details {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease, visibility 0.5s ease;
+  pointer-events: none;
+}
+
+.zone-details.active {
+  position: absolute;
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.zone-tagline {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1rem;
+  color: var(--accent-gold);
+  display: block;
+  margin-bottom: 8px;
+}
+
+.zone-title {
+  font-family: var(--font-serif);
+  font-size: 1.6rem;
+  font-weight: 500;
+  margin-bottom: 12px;
+  color: #fff;
+}
+
+.zone-desc {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.55;
+  opacity: 0.8;
+  margin-bottom: 16px;
+}
+
+.zone-meta {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.4);
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 8px;
+  display: inline-block;
+}
+
+/* Zones selector sidebar menu (floating on the right) */
+.zones-menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 260px;
+  justify-self: end;
+  background-color: rgba(8, 7, 7, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  padding: 24px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+/* Original pill-styled menu buttons restored */
+.zones-menu-item {
+  font-family: var(--font-sans);
+  font-size: 0.82rem;
+  font-weight: 500;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.45);
+  cursor: pointer;
+  padding: 10px 16px;
+  background-color: rgba(255, 255, 255, 0.02);
+  border: 1px solid transparent;
+  transition: all var(--transition-fast);
+}
+
+.zones-menu-item:hover {
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.06);
+}
+
+.zones-menu-item.active {
+  color: var(--accent-gold);
+  background-color: rgba(154, 123, 80, 0.12);
+  border-color: rgba(154, 123, 80, 0.25);
+}
+
+.zones-cta-wrapper {
+  margin-top: 12px;
 }
 
 /* ==========================================================================
@@ -1183,15 +1196,37 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
   .zones-outer-container {
     grid-template-columns: 1fr;
     gap: 40px;
+    padding: 80px 24px;
+    background: rgba(8, 7, 7, 0.9);
   }
   
   .zones-info-panel {
     min-height: auto;
+    max-width: 100%;
+    padding: 32px 24px;
+  }
+
+  .zones-visual-panel {
+    position: relative;
+    height: 50vh; /* Floating stacked image block size */
+    width: 100%;
+    z-index: 1;
+    order: -1; /* Display image first when stacked */
   }
 
   .zones-image-viewport {
-    height: auto;
-    aspect-ratio: 4/3; /* Restore standard layout ratios when elements stack */
+    width: 100%;
+    height: 100%;
+    border-radius: 0px;
+    box-shadow: none;
+  }
+
+  .zones-menu {
+    width: 100%;
+    justify-self: stretch;
+    grid-template-columns: repeat(2, 1fr);
+    display: grid;
+    padding: 16px;
   }
 }
 
