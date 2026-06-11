@@ -787,10 +787,11 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
 .zones-explorer-section {
   position: relative;
   width: 100%;
-  height: 100vh; /* Full viewport height */
+  min-height: 100vh; /* Allow viewport scroll on height overflow */
   background-color: #0b0a0a !important;
   color: #ffffff !important;
-  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
 /* Full-bleed background visual viewports */
@@ -836,10 +837,10 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
   position: relative;
   z-index: 10;
   width: 100%;
-  height: 100%;
+  min-height: 100vh; /* Match parent's min-height */
   max-width: 100%;
   margin: 0;
-  padding: 0 80px;
+  padding: 100px 80px; /* Vertically padded so items flow naturally and stay visible */
   display: grid;
   grid-template-columns: 1fr 1fr; /* Equal columns for left info / right tabs alignment */
   gap: 80px;
@@ -853,6 +854,8 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
 
 /* Left Panel: Glass content block */
 .zones-info-panel {
+  position: relative;
+  z-index: 5;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -955,47 +958,65 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
 
 /* Zones selector sidebar menu (floating on the right) */
 .zones-menu {
+  position: relative;
+  z-index: 5;
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
   width: 260px;
   justify-self: end;
-  background-color: rgba(8, 7, 7, 0.6);
-  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(8, 7, 7, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   padding: 24px;
   backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
 }
 
-/* Original pill-styled menu buttons restored */
+/* Original pill-styled menu buttons restored with high visibility & tactile feel */
 .zones-menu-item {
   font-family: var(--font-sans);
   font-size: 0.82rem;
   font-weight: 500;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.45);
+  color: rgba(255, 255, 255, 0.8); /* High contrast */
   cursor: pointer;
-  padding: 10px 16px;
-  background-color: rgba(255, 255, 255, 0.02);
-  border: 1px solid transparent;
+  padding: 12px 18px;
+  background-color: rgba(11, 10, 10, 0.7); /* Solid dark backing to pop on bright images */
+  border: 1px solid rgba(255, 255, 255, 0.15); /* Visible border */
   transition: all var(--transition-fast);
 }
 
 .zones-menu-item:hover {
   color: #fff;
-  background-color: rgba(255, 255, 255, 0.06);
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.45);
 }
 
 .zones-menu-item.active {
   color: var(--accent-gold);
-  background-color: rgba(154, 123, 80, 0.12);
-  border-color: rgba(154, 123, 80, 0.25);
+  background-color: rgba(154, 123, 80, 0.15);
+  border-color: var(--accent-gold); /* Solid gold border */
+  font-weight: 600;
 }
 
 .zones-cta-wrapper {
   margin-top: 12px;
+}
+
+/* Custom premium styling for gallery button in zones section */
+.zones-cta-wrapper .cta-gallery-btn {
+  border-color: var(--accent-gold);
+  color: var(--accent-gold);
+  background-color: rgba(11, 10, 10, 0.5);
+  font-weight: 600;
+}
+
+.zones-cta-wrapper .cta-gallery-btn:hover {
+  background-color: var(--accent-gold) !important;
+  color: #0b0a0a !important;
+  border-color: var(--accent-gold) !important;
 }
 
 /* Arrow controls for Zones Explorer */
@@ -1006,9 +1027,9 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
 }
 
 .zones-control-btn {
-  background-color: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(11, 10, 10, 0.75); /* Solid backing */
+  border: 1px solid rgba(255, 255, 255, 0.25); /* High contrast border */
+  color: #ffffff; /* High contrast icon color */
   width: 44px;
   height: 44px;
   display: flex;
@@ -1019,9 +1040,9 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
 }
 
 .zones-control-btn:hover {
-  color: #fff;
-  border-color: rgba(255, 255, 255, 0.25);
-  background-color: rgba(255, 255, 255, 0.08);
+  color: #0b0a0a;
+  border-color: var(--accent-gold);
+  background-color: var(--accent-gold); /* Satisfying hover fill */
 }
 
 .zones-control-btn:active {
@@ -1223,11 +1244,18 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
     gap: 40px;
   }
   
+  .zones-explorer-section {
+    height: auto;
+    min-height: 100vh;
+    overflow: visible;
+  }
+
   .zones-outer-container {
     grid-template-columns: 1fr;
     gap: 40px;
     padding: 80px 24px;
     background: rgba(8, 7, 7, 0.9);
+    min-height: auto; /* Let content determine height */
   }
   
   .zones-info-panel {
@@ -1256,7 +1284,10 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
     justify-self: stretch;
     grid-template-columns: repeat(2, 1fr);
     display: grid;
+    gap: 12px;
     padding: 16px;
+    background-color: rgba(8, 7, 7, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.08);
   }
 }
 
@@ -1303,7 +1334,7 @@ body[data-active-theme="alabaster"] .btn-nav-ghost:hover {
   }
   
   .zones-outer-container {
-    padding: 0 24px;
+    padding: 60px 24px;
   }
   
   .zones-menu {
