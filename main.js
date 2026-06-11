@@ -345,6 +345,24 @@ zoneItems.forEach(item => {
   });
 });
 
+// Attach unified arrow navigation listeners
+const zonesPrevBtn = document.getElementById('zones-prev-btn');
+const zonesNextBtn = document.getElementById('zones-next-btn');
+
+if (zonesPrevBtn && zonesNextBtn) {
+  zonesPrevBtn.addEventListener('click', () => {
+    stopAutoCycle(); // Stop auto cycle on manual interaction
+    activeZoneIndex = (activeZoneIndex - 1 + zoneKeys.length) % zoneKeys.length;
+    activateZone(zoneKeys[activeZoneIndex]);
+  });
+
+  zonesNextBtn.addEventListener('click', () => {
+    stopAutoCycle(); // Stop auto cycle on manual interaction
+    activeZoneIndex = (activeZoneIndex + 1) % zoneKeys.length;
+    activateZone(zoneKeys[activeZoneIndex]);
+  });
+}
+
 // Auto-play explorer when it scrolls into view
 ScrollTrigger.create({
   trigger: '#zones-section',

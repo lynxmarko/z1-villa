@@ -399,23 +399,33 @@
               </div>
             </div>
             
-            <!-- Navigation Menu (Desktop Sidebar) -->
-            <ul class="zones-menu">
-              <li class="zones-menu-item active" data-zone="flow">01. Flow</li>
-              <li class="zones-menu-item" data-zone="sunset">02. Sunset</li>
-              <li class="zones-menu-item" data-zone="recovery">03. Recovery</li>
-              <li class="zones-menu-item" data-zone="energy">04. Energy</li>
-              <li class="zones-menu-item" data-zone="nature">05. Nature</li>
-              <li class="zones-menu-item" data-zone="connection">06. Connection</li>
-              <li class="zones-menu-item" data-zone="taste">07. Taste</li>
-              <li class="zones-menu-item" data-zone="night">08. Night</li>
-            </ul>
+            <!-- Arrow Navigation controls -->
+            <div class="zones-controls" aria-label="Zone selector controls">
+              <button id="zones-prev-btn" class="zones-control-btn" aria-label="Previous Zone">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+              </button>
+              <button id="zones-next-btn" class="zones-control-btn" aria-label="Next Zone">
+                <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </div>
             
             <div class="zones-cta-wrapper">
               <a href="/gallery.html" class="btn btn-secondary btn-block cta-gallery-btn">View Full Gallery</a>
             </div>
           </div>
           
+          <!-- Navigation Menu (Desktop Sidebar) -->
+          <ul class="zones-menu">
+            <li class="zones-menu-item active" data-zone="flow">01. Flow</li>
+            <li class="zones-menu-item" data-zone="sunset">02. Sunset</li>
+            <li class="zones-menu-item" data-zone="recovery">03. Recovery</li>
+            <li class="zones-menu-item" data-zone="energy">04. Energy</li>
+            <li class="zones-menu-item" data-zone="nature">05. Nature</li>
+            <li class="zones-menu-item" data-zone="connection">06. Connection</li>
+            <li class="zones-menu-item" data-zone="taste">07. Taste</li>
+            <li class="zones-menu-item" data-zone="night">08. Night</li>
+          </ul>
+
           <!-- Right: Visual Display Panel -->
           <div class="zones-visual-panel">
             <div class="zones-image-viewport">
