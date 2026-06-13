@@ -25,15 +25,23 @@
       <img src="/assets/logo/villa-z1-logo.png" alt="Villa Z1 Logo" class="logo-img">
     </a>
     <nav class="nav-menu">
-      <a href="#hero" class="nav-item active" data-sec="hero">Home</a>
-      <a href="#story-start" class="nav-item" data-sec="story-start">The Story</a>
-      <a href="#zones-section" class="nav-item" data-sec="zones-section">The Zones</a>
-      <a href="/gallery.html" class="nav-item">Gallery</a>
-      <a href="#contact" class="nav-item" data-sec="contact">Contact</a>
+      <a href="#hero" class="nav-item active" data-sec="hero" data-i18n="nav_home">Home</a>
+      <a href="#story-start" class="nav-item" data-sec="story-start" data-i18n="nav_story">The Story</a>
+      <a href="#zones-section" class="nav-item" data-sec="zones-section" data-i18n="nav_zones">The Zones</a>
+      <a href="/gallery.html" class="nav-item" data-i18n="nav_gallery">Gallery</a>
+      <a href="#contact" class="nav-item" data-sec="contact" data-i18n="nav_contact">Contact</a>
     </nav>
     <div class="header-actions">
-      <a href="https://virtualtours.virtualno360.hr/F1Sb9odnx4" target="_blank" rel="noopener" class="btn btn-nav-ghost">360° Tour</a>
-      <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener" class="btn btn-nav-solid">Book Now</a>
+      <div class="lang-switcher-wrapper">
+        <select class="lang-select" aria-label="Select Language">
+          <option value="en">EN</option>
+          <option value="hr">HR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
+      <a href="/tour.html" class="btn btn-nav-ghost" data-i18n="nav_tour">360° Tour</a>
+      <a href="#contact" class="btn btn-nav-solid" data-i18n="nav_book">Book Now</a>
     </div>
     <button class="mobile-nav-toggle" aria-label="Toggle navigation menu">
       <span class="bar"></span>
@@ -44,13 +52,22 @@
   <!-- Mobile Menu -->
   <div id="mobile-menu" aria-hidden="true">
     <nav class="mobile-nav-links">
-      <a href="#hero" class="mobile-nav-item">Home</a>
-      <a href="#story-start" class="mobile-nav-item">The Story</a>
-      <a href="#zones-section" class="mobile-nav-item">The Zones</a>
-      <a href="/gallery.html" class="mobile-nav-item">Gallery</a>
-      <a href="#contact" class="mobile-nav-item">Contact</a>
-      <a href="https://virtualtours.virtualno360.hr/F1Sb9odnx4" target="_blank" rel="noopener" class="mobile-nav-item font-accent">360° Tour</a>
-      <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener" class="mobile-btn">Book Now</a>
+      <a href="#hero" class="mobile-nav-item" data-i18n="nav_home">Home</a>
+      <a href="#story-start" class="mobile-nav-item" data-i18n="nav_story">The Story</a>
+      <a href="#zones-section" class="mobile-nav-item" data-i18n="nav_zones">The Zones</a>
+      <a href="/gallery.html" class="mobile-nav-item" data-i18n="nav_gallery">Gallery</a>
+      <a href="#contact" class="mobile-nav-item" data-i18n="nav_contact">Contact</a>
+      <a href="/tour.html" class="mobile-nav-item font-accent" data-i18n="nav_tour">360° Tour</a>
+      <a href="#contact" class="mobile-btn" data-i18n="nav_book">Book Now</a>
+      <div class="mobile-lang-switcher">
+        <span class="mobile-lang-label">Language</span>
+        <select class="lang-select mobile-select">
+          <option value="en">English (EN)</option>
+          <option value="hr">Hrvatski (HR)</option>
+          <option value="de">Deutsch (DE)</option>
+          <option value="it">Italiano (IT)</option>
+        </select>
+      </div>
     </nav>
   </div>
 
@@ -66,23 +83,19 @@
         </div>
         <div class="hero-container">
           <div class="hero-content">
-            <span class="hero-subtitle fade-up-delay">VILLA Z1, IMOTSKI</span>
+            <span class="hero-subtitle fade-up-delay" data-i18n="hero_subtitle">VILLA Z1, IMOTSKI</span>
             <h1 class="hero-title fade-up">
-              <span>One Villa.</span>
-              <span class="text-serif italic font-weight-light">Endless Zones.</span>
+              <span data-i18n="hero_title_1">One Villa.</span>
+              <span class="text-serif italic font-weight-light" data-i18n="hero_title_2">Endless Zones.</span>
             </h1>
-            <p class="hero-intro fade-up-delay-2">
+            <p class="hero-intro fade-up-delay-2" data-i18n="hero_intro">
               A private architectural retreat in Croatia, crafted over generations. Every space holds a story; every view defines a state of mind.
             </p>
             <div class="hero-ctas fade-up-delay-3">
-              <a href="#story-start" class="btn btn-primary">Discover The Legacy</a>
-              <a href="#zones-section" class="btn btn-secondary">Explore The Zones</a>
+              <a href="#story-start" class="btn btn-primary" data-i18n="hero_btn_legacy">Discover The Legacy</a>
+              <a href="#zones-section" class="btn btn-secondary" data-i18n="hero_btn_zones">Explore The Zones</a>
             </div>
           </div>
-        </div>
-        <div class="hero-scroll-indicator" aria-hidden="true">
-          <span class="scroll-text">Scroll to begin</span>
-          <span class="scroll-line"></span>
         </div>
       </section>
 
@@ -98,15 +111,15 @@
           </div>
           <div class="day-night-content">
             <div class="day-night-text-wrapper">
-              <span class="day-night-sub">ARCHITECTURAL METAMORPHOSIS</span>
-              <h2 class="day-night-title">Watch the Day Dissolve</h2>
-              <p class="day-night-desc">
+              <span class="day-night-sub" data-i18n="dn_subtitle">ARCHITECTURAL METAMORPHOSIS</span>
+              <h2 class="day-night-title" data-i18n="dn_title">Watch the Day Dissolve</h2>
+              <p class="day-night-desc" data-i18n="dn_desc">
                 From sun-drenched valley vistas to the glowing, starlit silence of the evening pool, Villa Z1 adapts beautifully to the changing light.
               </p>
               <div class="day-night-indicator">
-                <span class="ind-day">Day</span>
+                <span class="ind-day" data-i18n="dn_day">Day</span>
                 <span class="ind-slider-track"><span class="ind-slider-knob"></span></span>
-                <span class="ind-night">Night</span>
+                <span class="ind-night" data-i18n="dn_night">Night</span>
               </div>
             </div>
           </div>
@@ -116,11 +129,11 @@
       <!-- Story Prologue / Divider -->
       <section id="story-start" class="prologue-section" data-theme="dark-warm">
         <div class="container small">
-          <span class="section-label">PROLOGUE</span>
-          <blockquote class="prologue-quote">
+          <span class="section-label" data-i18n="prologue_label">PROLOGUE</span>
+          <blockquote class="prologue-quote" data-i18n="prologue_quote">
             "Villa Z1 is not just a house. It is the continuation of a family story that began with modest beginnings, hard work, and a deep connection to this land."
           </blockquote>
-          <p class="prologue-sub">
+          <p class="prologue-sub" data-i18n="prologue_sub">
             Scroll down to walk through the chapters of our history, from the humble stone dwellings on the hillside to the modern architectural masterpiece that stands today.
           </p>
         </div>
@@ -134,11 +147,11 @@
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER I</span>
-                <h2 class="chapter-title">The Legacy of the Land</h2>
+                <span class="chapter-number" data-i18n="ch1_num">CHAPTER I</span>
+                <h2 class="chapter-title" data-i18n="ch1_title">The Legacy of the Land</h2>
                 <div class="chapter-body">
-                  <p>Our family’s roots in this place go back generations. My grandfather and great-grandfather came from humble circumstances. Life was simple, and often difficult.</p>
-                  <p>Several family members lived together under one small roof in an old house on the hillside, just about a kilometre from where Villa Z1 stands today. The living room was only around 10 square metres, the sleeping rooms were small, and space was shared by necessity rather than choice.</p>
+                  <p data-i18n="ch1_body1">Our family’s roots in this place go back generations. My grandfather and great-grandfather came from humble circumstances. Life was simple, and often difficult.</p>
+                  <p data-i18n="ch1_body2">Several family members lived together under one small roof in an old house on the hillside, just about a kilometre from where Villa Z1 stands today. The living room was only around 10 square metres, the sleeping rooms were small, and space was shared by necessity rather than choice.</p>
                 </div>
               </div>
             </div>
@@ -155,11 +168,11 @@
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER II</span>
-                <h2 class="chapter-title">The Builder's Sacrifice</h2>
+                <span class="chapter-number" data-i18n="ch2_num">CHAPTER II</span>
+                <h2 class="chapter-title" data-i18n="ch2_title">The Builder's Sacrifice</h2>
                 <div class="chapter-body">
-                  <p>My grandfather spent years working in construction in Germany to support his family. Like many men of his generation, he carried the weight of creating a better future with his own hands.</p>
-                  <p>Over time, the family moved lower down the hill into a newer and slightly larger house. It was an improvement, but still modest by today’s standards, especially as the sons grew older, married, and started families of their own.</p>
+                  <p data-i18n="ch2_body1">My grandfather spent years working in construction in Germany to support his family. Like many men of his generation, he carried the weight of creating a better future with his own hands.</p>
+                  <p data-i18n="ch2_body2">Over time, the family moved lower down the hill into a newer and slightly larger house. It was an improvement, but still modest by today’s standards, especially as the sons grew older, married, and started families of their own.</p>
                 </div>
               </div>
             </div>
@@ -176,11 +189,11 @@
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER III</span>
-                <h2 class="chapter-title">Foundations of Unity</h2>
+                <span class="chapter-number" data-i18n="ch3_num">CHAPTER III</span>
+                <h2 class="chapter-title" data-i18n="ch3_title">Foundations of Unity</h2>
                 <div class="chapter-body">
-                  <p>Eventually, my grandfather decided it was time to build two houses for his two older sons, while the youngest would remain with the parents. Finding land was not easy. In those days, people rarely wanted to sell good plots.</p>
-                  <p>But after some persistence, the family managed to secure land. Two identical houses were built side by side. With the knowledge and experience my grandfather had gained in Germany, much of the work was done by the family themselves, with only limited outside help. It was a practical decision: you built what you could, with what you had, and you made it last.</p>
+                  <p data-i18n="ch3_body1">Eventually, my grandfather decided it was time to build two houses for his two older sons, while the youngest would remain with the parents. Finding land was not easy. In those days, people rarely wanted to sell good plots.</p>
+                  <p data-i18n="ch3_body2">But after some persistence, the family managed to secure land. Two identical houses were built side by side. With the knowledge and experience my grandfather had gained in Germany, much of the work was done by the family themselves, with only limited outside help. It was a practical decision: you built what you could, with what you had, and you made it last.</p>
                 </div>
               </div>
             </div>
@@ -197,11 +210,11 @@
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER IV</span>
-                <h2 class="chapter-title">Summers of Nostalgia</h2>
+                <span class="chapter-number" data-i18n="ch4_num">CHAPTER IV</span>
+                <h2 class="chapter-title" data-i18n="ch4_title">Summers of Nostalgia</h2>
                 <div class="chapter-body">
-                  <p>I was born a few years before my family moved into one of those houses. It served us well for many years. Later, my parents moved to Zagreb, Croatia’s capital, in search of better work opportunities.</p>
-                  <p>Still, our house in our hometown remained an important part of our lives. Summers were spent here, surrounded by family, nature, and familiar landscapes. These long, sun-drenched months shaped my memories and connection to this ground.</p>
+                  <p data-i18n="ch4_body1">I was born a few years before my family moved into one of those houses. It served us well for many years. Later, my parents moved to Zagreb, Croatia’s capital, in search of better work opportunities.</p>
+                  <p data-i18n="ch4_body2">Still, our house in our hometown remained an important part of our lives. Summers were spent here, surrounded by family, nature, and familiar landscapes. These long, sun-drenched months shaped my memories and connection to this ground.</p>
                 </div>
               </div>
             </div>
@@ -214,15 +227,15 @@
         </section>
 
         <!-- CHAPTER 5 -->
-        <section id="chapter-5" class="story-chapter" data-theme="sage">
+        <section id="chapter-5" class="story-chapter" data-theme="sand">
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER V</span>
-                <h2 class="chapter-title">The Need for Light</h2>
+                <span class="chapter-number" data-i18n="ch5_num">CHAPTER V</span>
+                <h2 class="chapter-title" data-i18n="ch5_title">The Need for Light</h2>
                 <div class="chapter-body">
-                  <p>As I grew older, however, I started to feel the limitations of the old house more clearly. It was cold, without proper thermal insulation. The living room faced north, so there was little natural light.</p>
-                  <p>At the time it was built, protection from summer heat mattered more than bright open interiors. What had once been a solid and practical family home no longer matched the way we wanted to live. After I became the owner of the land, I wanted to create a place where we would genuinely love to return — warm, open, comfortable, and alive.</p>
+                  <p data-i18n="ch5_body1">As I grew older, however, I started to feel the limitations of the old house more clearly. It was cold, without proper thermal insulation. The living room faced north, so there was little natural light.</p>
+                  <p data-i18n="ch5_body2">At the time it was built, protection from summer heat mattered more than bright open interiors. What had once been a solid and practical family home no longer matched the way we wanted to live. After I became the owner of the land, I wanted to create a place where we would genuinely love to return — warm, open, comfortable, and alive.</p>
                 </div>
               </div>
             </div>
@@ -239,11 +252,11 @@
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER VI</span>
-                <h2 class="chapter-title">Starting Anew</h2>
+                <span class="chapter-number" data-i18n="ch6_num">CHAPTER VI</span>
+                <h2 class="chapter-title" data-i18n="ch6_title">Starting Anew</h2>
                 <div class="chapter-body">
-                  <p>At first, I considered renovating the existing house. But after reviewing the possibilities, it became clear that renovation would mean too many compromises. To create the kind of home this place deserved, we would have to start again.</p>
-                  <p>Just as in my grandfather's time, land was difficult to secure. Owners of the best plots were not willing to sell. In the end, I decided to return to the place where our family had already built once before: the old house would make way for the new.</p>
+                  <p data-i18n="ch6_body1">At first, I considered renovating the existing house. But after reviewing the possibilities, it became clear that renovation would mean too many compromises. To create the kind of home this place deserved, we would have to start again.</p>
+                  <p data-i18n="ch6_body2">Just as in my grandfather's time, land was difficult to secure. Owners of the best plots were not willing to sell. In the end, I decided to return to the place where our family had already built once before: the old house would make way for the new.</p>
                 </div>
               </div>
             </div>
@@ -260,11 +273,11 @@
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER VII</span>
-                <h2 class="chapter-title">Handcrafted Detail</h2>
+                <span class="chapter-number" data-i18n="ch7_num">CHAPTER VII</span>
+                <h2 class="chapter-title" data-i18n="ch7_title">Handcrafted Detail</h2>
                 <div class="chapter-body">
-                  <p>The construction of Villa Z1 lasted three years. After the initial structural work was completed, we came for what was supposed to be a normal family holiday. Very quickly, I realised that the project needed constant attention.</p>
-                  <p>Because I am self-employed, my family and I had the flexibility to stay. So instead of returning to Zagreb as planned, we remained here for almost two years, living close to the construction site and following the process day by day.</p>
+                  <p data-i18n="ch7_body1">The construction of Villa Z1 lasted three years. After the initial structural work was completed, we came for what was supposed to be a normal family holiday. Very quickly, I realised that the project needed constant attention.</p>
+                  <p data-i18n="ch7_body2">Because I am self-employed, my family and I had the flexibility to stay. So instead of returning to Zagreb as planned, we remained here for almost two years, living close to the construction site and following the process day by day.</p>
                 </div>
               </div>
             </div>
@@ -277,14 +290,14 @@
         </section>
 
         <!-- CHAPTER 8 -->
-        <section id="chapter-8" class="story-chapter" data-theme="clay">
+        <section id="chapter-8" class="story-chapter" data-theme="alabaster">
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER VIII</span>
-                <h2 class="chapter-title">Deeply Personal</h2>
+                <span class="chapter-number" data-i18n="ch8_num">CHAPTER VIII</span>
+                <h2 class="chapter-title" data-i18n="ch8_title">Deeply Personal</h2>
                 <div class="chapter-body">
-                  <p>That changed the entire character of the project. Villa Z1 was no longer just a design on paper or a construction investment. It became deeply personal.</p>
+                  <p data-i18n="ch8_body1">That changed the entire character of the project. Villa Z1 was no longer just a design on paper or a construction investment. It became deeply personal.</p>
                   <p>We experienced every stage of the build first-hand: every detail, every problem, every solution, every improvement. The house was shaped not only by architects and builders, but by lived experience, adjusting materials and layouts to fit the wind, the sun, and the landscape.</p>
                 </div>
               </div>
@@ -302,12 +315,12 @@
           <div class="chapter-grid">
             <div class="chapter-text-col">
               <div class="chapter-text-content">
-                <span class="chapter-number">CHAPTER IX</span>
-                <h2 class="chapter-title">The Living Legacy</h2>
+                <span class="chapter-number" data-i18n="ch9_num">CHAPTER IX</span>
+                <h2 class="chapter-title" data-i18n="ch9_title">The Living Legacy</h2>
                 <div class="chapter-body">
-                  <p>Today, Villa Z1 is enjoyed by several generations of our family. My daughters, my wife and I, my father, and occasionally my siblings all spend time here.</p>
-                  <p>In a way, the house brings together the past and the future: the memory of modest beginnings, the work of previous generations, and a new standard of comfort. It stands on the same family land where an older home once stood. But it carries something more than stone, glass, and design. It carries continuity.</p>
-                  <p class="font-accent italic text-serif">It is a tribute to those who built before us — and a place created for those who come next.</p>
+                  <p data-i18n="ch9_body1">Today, Villa Z1 is enjoyed by several generations of our family. My daughters, my wife and I, my father, and occasionally my siblings all spend time here.</p>
+                  <p data-i18n="ch9_body2">In a way, the house brings together the past and the future: the memory of modest beginnings, the work of previous generations, and a new standard of comfort. It stands on the same family land where an older home once stood. But it carries something more than stone, glass, and design. It carries continuity.</p>
+                  <p class="font-accent italic text-serif" data-i18n="ch9_body3">It is a tribute to those who built before us — and a place created for those who come next.</p>
                 </div>
               </div>
             </div>
@@ -324,12 +337,12 @@
       <!-- Modern Intro Section -->
       <section id="modern-intro" class="modern-intro-section" data-theme="alabaster">
         <div class="container text-center">
-          <span class="section-label">THE MODERN RETREAT</span>
-          <h2 class="modern-intro-title">One Villa. Endless Zones.</h2>
-          <p class="modern-intro-text">
+          <span class="section-label" data-i18n="mod_label">THE MODERN RETREAT</span>
+          <h2 class="modern-intro-title" data-i18n="mod_title">One Villa. Endless Zones.</h2>
+          <p class="modern-intro-text" data-i18n="mod_text">
             Based on the philosophy that a premium villa should adapt to your state of mind, Villa Z1 is designed as a collection of sensory experiences. We call them the **ZONES** — custom-curated environments for energy, balance, flow, and recovery.
           </p>
-          <div class="scroll-prompt-zones">
+          <div class="scroll-prompt-zones" data-i18n="mod_scroll">
             <span class="arrow-down">↓</span> Scroll to explore the Zones
           </div>
         </div>
@@ -342,60 +355,60 @@
           <!-- Sticky Left: Info Panel -->
           <div class="zones-info-panel">
             <div class="zones-sticky-header">
-              <span class="section-label white">THE EXPERIENCE ZONES</span>
-              <h2 class="zones-main-title">Navigate Your State of Mind</h2>
-              <p class="zones-main-desc">Explore the curated zones of Villa Z1. Tap each zone to transition the space and experience its distinct atmosphere.</p>
+              <span class="section-label white" data-i18n="zone_label">THE EXPERIENCE ZONES</span>
+              <h2 class="zones-main-title" data-i18n="zone_main_title">Navigate Your State of Mind</h2>
+              <p class="zones-main-desc" data-i18n="zone_main_desc">Explore the curated zones of Villa Z1. Tap each zone to transition the space and experience its distinct atmosphere.</p>
             </div>
             
             <!-- Dynamic Info Box -->
             <div class="zones-dynamic-content-box">
               <div class="zone-details active" data-zone="flow">
-                <span class="zone-tagline">"Pure freedom, water, and light"</span>
-                <h3 class="zone-title">ZONE of Flow</h3>
-                <p class="zone-desc">The heated infinity pool features counter-current swimming, a geyser, and hydromassage jets. Seamlessly blending into the valley views, it offers effortless movement and absolute weightlessness under the sun.</p>
-                <div class="zone-meta">Featured Space: Infinity Pool & Sunbeds</div>
+                <span class="zone-tagline" data-i18n="zone_flow_tag">"Pure freedom, water, and light"</span>
+                <h3 class="zone-title" data-i18n="zone_flow_title">ZONE of Flow</h3>
+                <p class="zone-desc" data-i18n="zone_flow_desc">The heated infinity pool features counter-current swimming, a geyser, and hydromassage jets. Seamlessly blending into the valley views, it offers effortless movement and absolute weightlessness under the sun.</p>
+                <div class="zone-meta" data-i18n="zone_flow_meta">Featured Space: Infinity Pool & Sunbeds</div>
               </div>
               <div class="zone-details" data-zone="sunset">
-                <span class="zone-tagline">"Where time slows down and everything feels just right"</span>
-                <h3 class="zone-title">ZONE of Sunset</h3>
-                <p class="zone-desc">Positioned at the highest point of the terraces and rooftops, this zone captures the breathtaking golden hours of Imotski. Witness the sky burn orange and pink over the Biokovo mountain range in total peace.</p>
-                <div class="zone-meta">Featured Space: Rooftop & Upper Terraces</div>
+                <span class="zone-tagline" data-i18n="zone_sunset_tag">"Where time slows down and everything feels just right"</span>
+                <h3 class="zone-title" data-i18n="zone_sunset_title">ZONE of Sunset</h3>
+                <p class="zone-desc" data-i18n="zone_sunset_desc">Positioned at the highest point of the terraces and rooftops, this zone captures the breathtaking golden hours of Imotski. Witness the sky burn orange and pink over the Biokovo mountain range in total peace.</p>
+                <div class="zone-meta" data-i18n="zone_sunset_meta">Featured Space: Rooftop & Upper Terraces</div>
               </div>
               <div class="zone-details" data-zone="recovery">
-                <span class="zone-tagline">"Where body and mind reset"</span>
-                <h3 class="zone-title">ZONE of Recovery</h3>
-                <p class="zone-desc">The indoor spa area houses an elegant finnish sauna, a premium heated jacuzzi, and direct access to a relaxation lounge. Close the doors to the outside world and let silence restore your physical and mental balance.</p>
-                <div class="zone-meta">Featured Space: Indoor Spa & Finnish Sauna</div>
+                <span class="zone-tagline" data-i18n="zone_recovery_tag">"Where body and mind reset"</span>
+                <h3 class="zone-title" data-i18n="zone_recovery_title">ZONE of Recovery</h3>
+                <p class="zone-desc" data-i18n="zone_recovery_desc">The indoor spa area houses an elegant finnish sauna, a premium heated jacuzzi, and direct access to a relaxation lounge. Close the doors to the outside world and let silence restore your physical and mental balance.</p>
+                <div class="zone-meta" data-i18n="zone_recovery_meta">Featured Space: Indoor Spa & Finnish Sauna</div>
               </div>
               <div class="zone-details" data-zone="energy">
-                <span class="zone-tagline">"Where movement meets focus and discipline becomes clarity"</span>
-                <h3 class="zone-title">ZONE of Energy</h3>
-                <p class="zone-desc">Our fully equipped private gym is designed for high-performance training and focus. Outfitted with state-of-the-art strength and cardio equipment, it provides a dedicated environment to push your limits.</p>
-                <div class="zone-meta">Featured Space: Private Fitness Room</div>
+                <span class="zone-tagline" data-i18n="zone_energy_tag">"Where movement meets focus and discipline becomes clarity"</span>
+                <h3 class="zone-title" data-i18n="zone_energy_title">ZONE of Energy</h3>
+                <p class="zone-desc" data-i18n="zone_energy_desc">Our fully equipped private gym is designed for high-performance training and focus. Outfitted with state-of-the-art strength and cardio equipment, it provides a dedicated environment to push your limits.</p>
+                <div class="zone-meta" data-i18n="zone_energy_meta">Featured Space: Private Fitness Room</div>
               </div>
               <div class="zone-details" data-zone="nature">
-                <span class="zone-tagline">"A quiet connection to nature, designed for calm and presence"</span>
-                <h3 class="zone-title">ZONE of Nature</h3>
-                <p class="zone-desc">A professionally landscaped garden containing natural stepping stones, mature olive trees, and an artificial organic pond. Walk barefoot through the grass and listen to the trickling waterfalls.</p>
-                <div class="zone-meta">Featured Space: Olive Garden & Organic Pond</div>
+                <span class="zone-tagline" data-i18n="zone_nature_tag">"A quiet connection to nature, designed for calm and presence"</span>
+                <h3 class="zone-title" data-i18n="zone_nature_title">ZONE of Nature</h3>
+                <p class="zone-desc" data-i18n="zone_nature_desc">A professionally landscaped garden containing natural stepping stones, mature olive trees, and an artificial organic pond. Walk barefoot through the grass and listen to the trickling waterfalls.</p>
+                <div class="zone-meta" data-i18n="zone_nature_meta">Featured Space: Olive Garden & Organic Pond</div>
               </div>
               <div class="zone-details" data-zone="connection">
-                <span class="zone-tagline">"Moments shared with friends and family — meaningful, unfiltered"</span>
-                <h3 class="zone-title">ZONE of Connection</h3>
-                <p class="zone-desc">The open-plan living room, luxury dining room, and professional kitchen flow directly out to the outdoor dining terrace. Designed to gather those who matter most for long, lingering dinners and deep conversations.</p>
-                <div class="zone-meta">Featured Space: Open-Plan Living & Dining</div>
+                <span class="zone-tagline" data-i18n="zone_connection_tag">"Moments shared with friends and family — meaningful, unfiltered"</span>
+                <h3 class="zone-title" data-i18n="zone_connection_title">ZONE of Connection</h3>
+                <p class="zone-desc" data-i18n="zone_connection_desc">The open-plan living room, luxury dining room, and professional kitchen flow directly out to the outdoor dining terrace. Designed to gather those who matter most for long, lingering dinners and deep conversations.</p>
+                <div class="zone-meta" data-i18n="zone_connection_meta">Featured Space: Open-Plan Living & Dining</div>
               </div>
               <div class="zone-details" data-zone="taste">
-                <span class="zone-tagline">"Simple, refined, sensory pleasure"</span>
-                <h3 class="zone-title">ZONE of Taste</h3>
-                <p class="zone-desc">An outdoor kitchen featuring a professional gas grill, spacious prep counters, and an al fresco dining table sheltered from the mid-day sun, overlooking the valley. Experience local cuisine cooked to perfection.</p>
-                <div class="zone-meta">Featured Space: Summer Kitchen & Al Fresco Terrace</div>
+                <span class="zone-tagline" data-i18n="zone_taste_tag">"Simple, refined, sensory pleasure"</span>
+                <h3 class="zone-title" data-i18n="zone_taste_title">ZONE of Taste</h3>
+                <p class="zone-desc" data-i18n="zone_taste_desc">An outdoor kitchen featuring a professional gas grill, spacious prep counters, and an al fresco dining table sheltered from the mid-day sun, overlooking the valley. Experience local cuisine cooked to perfection.</p>
+                <div class="zone-meta" data-i18n="zone_taste_meta">Featured Space: Summer Kitchen & Al Fresco Terrace</div>
               </div>
               <div class="zone-details" data-zone="night">
-                <span class="zone-tagline">"Ambient lighting, fire, and silence"</span>
-                <h3 class="zone-title">ZONE of Night</h3>
-                <p class="zone-desc">As dusk falls, the villa transforms. Warm, low-temperature facade illumination reflecting off the pool, coupled with the circular firepit lounge, creates an intimate, starlit evening atmosphere.</p>
-                <div class="zone-meta">Featured Space: Sunken Firepit & Night Terrace</div>
+                <span class="zone-tagline" data-i18n="zone_night_tag">"Ambient lighting, fire, and silence"</span>
+                <h3 class="zone-title" data-i18n="zone_night_title">ZONE of Night</h3>
+                <p class="zone-desc" data-i18n="zone_night_desc">As dusk falls, the villa transforms. Warm, low-temperature facade illumination reflecting off the pool, coupled with the circular firepit lounge, creates an intimate, starlit evening atmosphere.</p>
+                <div class="zone-meta" data-i18n="zone_night_meta">Featured Space: Sunken Firepit & Night Terrace</div>
               </div>
             </div>
             
@@ -410,20 +423,20 @@
             </div>
             
             <div class="zones-cta-wrapper">
-              <a href="/gallery.html" class="btn btn-secondary btn-block cta-gallery-btn">View Full Gallery</a>
+              <a href="/gallery.html" class="btn btn-secondary btn-block cta-gallery-btn" data-i18n="zone_view_gallery">View Full Gallery</a>
             </div>
           </div>
           
           <!-- Navigation Menu (Desktop Sidebar) -->
           <ul class="zones-menu">
-            <li class="zones-menu-item active" data-zone="flow">01. Flow</li>
-            <li class="zones-menu-item" data-zone="sunset">02. Sunset</li>
-            <li class="zones-menu-item" data-zone="recovery">03. Recovery</li>
-            <li class="zones-menu-item" data-zone="energy">04. Energy</li>
-            <li class="zones-menu-item" data-zone="nature">05. Nature</li>
-            <li class="zones-menu-item" data-zone="connection">06. Connection</li>
-            <li class="zones-menu-item" data-zone="taste">07. Taste</li>
-            <li class="zones-menu-item" data-zone="night">08. Night</li>
+            <li class="zones-menu-item active" data-zone="flow" data-i18n="zone_flow_menu">Flow</li>
+            <li class="zones-menu-item" data-zone="sunset" data-i18n="zone_sunset_menu">Sunset</li>
+            <li class="zones-menu-item" data-zone="recovery" data-i18n="zone_recovery_menu">Recovery</li>
+            <li class="zones-menu-item" data-zone="energy" data-i18n="zone_energy_menu">Energy</li>
+            <li class="zones-menu-item" data-zone="nature" data-i18n="zone_nature_menu">Nature</li>
+            <li class="zones-menu-item" data-zone="connection" data-i18n="zone_connection_menu">Connection</li>
+            <li class="zones-menu-item" data-zone="taste" data-i18n="zone_taste_menu">Taste</li>
+            <li class="zones-menu-item" data-zone="night" data-i18n="zone_night_menu">Night</li>
           </ul>
 
           <!-- Right: Visual Display Panel -->
@@ -459,28 +472,99 @@
         </div>
       </section>
 
+      <!-- Premium Amenities & Exclusive Services Section -->
+      <section id="amenities-section" class="amenities-section" data-theme="sand">
+        <div class="container">
+          <div class="text-center section-header">
+            <span class="section-label" data-i18n="am_label">UNCOMPROMISING LUXURY</span>
+            <h2 class="section-title" data-i18n="am_title">Designed for Complete Relaxation</h2>
+            <p class="section-desc" data-i18n="am_desc">From our high-performance fitness setup to bespoke concierge services, Villa Z1 provides every comfort for an unforgettable retreat.</p>
+          </div>
+          
+          <div class="amenities-grid">
+            <div class="amenity-card">
+              <div class="amenity-icon">🏊‍♂️</div>
+              <h3 class="amenity-title" data-i18n="am_pool_title">Heated Infinity Pool</h3>
+              <p class="amenity-text" data-i18n="am_pool_text">Features a counter-current swim system, hydro-massage jets, and an active geyser blending into panoramic valley views.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🧖‍♀️</div>
+              <h3 class="amenity-title" data-i18n="am_spa_title">Wellness Spa & Sauna</h3>
+              <p class="amenity-text" data-i18n="am_spa_text">Enjoy our private indoor wellness zone equipped with a premium heated jacuzzi, Finnish sauna, and relaxation deck.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🏋️‍♂️</div>
+              <h3 class="amenity-title" data-i18n="am_gym_title">Private Gym</h3>
+              <p class="amenity-text" data-i18n="am_gym_text">A state-of-the-art strength and cardio training room, fully equipped for your daily active routines and focus.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🎱</div>
+              <h3 class="amenity-title" data-i18n="am_games_title">Entertainment Lounge</h3>
+              <p class="amenity-text" data-i18n="am_games_text">A dedicated games room featuring a professional billiards table, table tennis, darts, and a private bar.</p>
+            </div>
+            <div class="amenity-card highlight">
+              <div class="amenity-icon">🛎️</div>
+              <h3 class="amenity-title" data-i18n="am_concierge_title">Private Concierge</h3>
+              <p class="amenity-text" data-i18n="am_concierge_text">Your dedicated host can arrange personal chefs, restaurant reservations, custom land excursions, and local transfers.</p>
+            </div>
+            <div class="amenity-card highlight">
+              <div class="amenity-icon">💆‍♀️</div>
+              <h3 class="amenity-title" data-i18n="am_massage_title">In-Villa Massage</h3>
+              <p class="amenity-text" data-i18n="am_massage_text">Restore physical balance with professional, custom massage therapy sessions scheduled directly in our wellness lounge.</p>
+            </div>
+            <div class="amenity-card highlight">
+              <div class="amenity-icon">🍷</div>
+              <h3 class="amenity-title" data-i18n="am_wine_title">Premium Wine Selection</h3>
+              <p class="amenity-text" data-i18n="am_wine_text">Explore the region's finest vineyards with a curated cellar selection, wine fridge, and private tasting arrangements.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🍳</div>
+              <h3 class="amenity-title" data-i18n="am_kitchen_title">Summer Kitchen & Grill</h3>
+              <p class="amenity-text" data-i18n="am_kitchen_text">Featuring a high-end gas grill, spacious prep counter, outdoor dining terrace, and a circular sunken firepit lounge.</p>
+            </div>
+            <div class="amenity-card">
+              <div class="amenity-icon">🔌</div>
+              <h3 class="amenity-title" data-i18n="am_comfort_title">Comforts & EV Charging</h3>
+              <p class="amenity-text" data-i18n="am_comfort_text">Equipped with air conditioning, underfloor heating, multi-room audio, and 4 private parking slots with an electric vehicle charger.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Interactive 360° Virtual Tour Section -->
+      <section id="virtual-tour-section" class="virtual-tour-section" data-theme="dark">
+        <div class="container text-center">
+          <span class="section-label gold" data-i18n="tour_label">VIRTUAL WALKTHROUGH</span>
+          <h2 class="tour-section-title" data-i18n="tour_title">Explore the Retreat in 3D</h2>
+          <p class="tour-section-desc" data-i18n="tour_desc">Walk through the rooms, pool terrace, and wellness spaces. Interact with our full virtual tour below.</p>
+          <div class="tour-iframe-wrapper">
+            <iframe src="https://virtualtours.virtualno360.hr/F1Sb9odnx4" allowfullscreen="true" loading="lazy" title="Villa Z1 360 Virtual Tour" class="tour-iframe"></iframe>
+          </div>
+        </div>
+      </section>
+
       <!-- Contact / Call to Action Section -->
-      <section id="contact" class="contact-section" data-theme="dark">
+      <section id="contact" class="contact-section" data-theme="alabaster">
         <div class="container">
           <div class="contact-grid">
             <div class="contact-info-col">
-              <span class="section-label gold">RESERVE YOUR RETREAT</span>
-              <h2 class="contact-title">Experience the Legacy Firsthand</h2>
-              <p class="contact-desc">
+              <span class="section-label gold" data-i18n="con_label">RESERVE YOUR RETREAT</span>
+              <h2 class="contact-title" data-i18n="con_title">Experience the Legacy Firsthand</h2>
+              <p class="contact-desc" data-i18n="con_desc">
                 Whether seeking the restorative calm of our spa recovery zones, the physical focus of our training decks, or simple, shared moments by the infinity pool, Villa Z1 awaits you.
               </p>
               
               <div class="contact-details-list">
                 <div class="contact-detail-item">
-                  <span class="detail-label">Location</span>
-                  <span class="detail-value">Imotski, Splitsko-dalmatinska županija, Croatia</span>
+                  <span class="detail-label" data-i18n="con_loc_label">Location</span>
+                  <span class="detail-value" data-i18n="con_loc_val">Imotski, Splitsko-dalmatinska županija, Croatia</span>
                 </div>
                 <div class="contact-detail-item">
-                  <span class="detail-label">Capacity</span>
-                  <span class="detail-value">5 Luxury Bedrooms / 7 Bathrooms (Up to 10 Guests)</span>
+                  <span class="detail-label" data-i18n="con_cap_label">Capacity</span>
+                  <span class="detail-value" data-i18n="con_cap_val">5 Luxury Bedrooms / 7 Bathrooms (Up to 10 Guests)</span>
                 </div>
                 <div class="contact-detail-item">
-                  <span class="detail-label">Follow Us</span>
+                  <span class="detail-label" data-i18n="con_follow">Follow Us</span>
                   <span class="detail-value">
                     <a href="https://www.instagram.com/villaz1.croatia" target="_blank" rel="noopener" class="contact-social-link">@villaz1.croatia</a>
                   </span>
@@ -490,14 +574,60 @@
             
             <div class="contact-card-col">
               <div class="booking-card">
-                <h3 class="card-title">Book Your Stay</h3>
-                <p class="card-text">Rates depend on the season. Secure your dates via our verified booking channel or consult details directly.</p>
-                <div class="card-buttons">
-                  <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener" class="btn btn-gold btn-block">Secure on Booking.com</a>
-                  <a href="https://virtualtours.virtualno360.hr/F1Sb9odnx4" target="_blank" rel="noopener" class="btn btn-outline-white btn-block">Explore 360° Virtual Tour</a>
+                <h3 class="card-title" data-i18n="book_title">Plan Your Stay</h3>
+                <p class="card-text" data-i18n="book_desc">Check availability and request dates. We will contact you directly to confirm your custom reservation.</p>
+                
+                <form id="booking-form" class="booking-form">
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="booking-checkin" data-i18n="book_checkin">Check-in</label>
+                      <input type="date" id="booking-checkin" name="checkIn" required class="form-input">
+                    </div>
+                    <div class="form-group">
+                      <label for="booking-checkout" data-i18n="book_checkout">Check-out</label>
+                      <input type="date" id="booking-checkout" name="checkOut" required class="form-input">
+                    </div>
+                  </div>
+                  
+                  <div class="form-row">
+                    <div class="form-group">
+                      <label for="booking-guests" data-i18n="book_guests">Guests</label>
+                      <select id="booking-guests" name="guests" required class="form-input" data-i18n="book_guests_opts">
+                        <option value="" disabled selected>Select</option>
+                        <option value="1-2">1 - 2 Guests</option>
+                        <option value="3-4">3 - 4 Guests</option>
+                        <option value="5-6">5 - 6 Guests</option>
+                        <option value="7-8">7 - 8 Guests</option>
+                        <option value="9-10">9 - 10 Guests</option>
+                      </select>
+                    </div>
+                    <div class="form-group">
+                      <label for="booking-name" data-i18n="book_name">Full Name</label>
+                      <input type="text" id="booking-name" name="name" placeholder="John Doe" data-i18n="book_name" required class="form-input">
+                    </div>
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="booking-email" data-i18n="book_email">Email Address</label>
+                    <input type="email" id="booking-email" name="email" placeholder="john@example.com" data-i18n="book_email" required class="form-input">
+                  </div>
+                  
+                  <div class="form-group">
+                    <label for="booking-requests" data-i18n="book_requests">Special Requests & Services</label>
+                    <textarea id="booking-requests" name="comments" placeholder="e.g. In-villa massage sessions, private chef dinners, airport transfer, wine tastings..." data-i18n="book_requests" rows="3" class="form-input text-area"></textarea>
+                  </div>
+                  
+                  <button type="submit" class="btn btn-gold btn-block" data-i18n="book_btn">Request Booking</button>
+                </form>
+                
+                <div id="booking-success" class="booking-success-message hidden">
+                  <div class="success-icon">✓</div>
+                  <h4 data-i18n="book_success_title">Booking Request Received</h4>
+                  <p data-i18n="book_success_text">Thank you for choosing Villa Z1. We will verify availability and get back to you shortly via email with details.</p>
                 </div>
-                <div class="card-notice">
-                  Official Registration: Vacation Rental / Villa Z1
+                
+                <div class="card-notice" style="margin-top: 20px;" data-i18n="book_alt">
+                  Alternatively, you can book instantly on <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener">Booking.com</a>
                 </div>
               </div>
             </div>
@@ -510,13 +640,13 @@
         <div class="container">
           <div class="footer-top">
             <img src="/assets/logo/villa-z1-logo.png" alt="Villa Z1" class="footer-logo">
-            <p class="footer-tagline">One villa. Endless zones.</p>
+            <p class="footer-tagline" data-i18n="foot_tagline">One villa. Endless zones.</p>
           </div>
           <div class="footer-bottom">
-            <p class="footer-copyright">&copy; 2026 Villa Z1. All rights reserved. Created in tribute to those who built before us.</p>
+            <p class="footer-copyright" data-i18n="foot_copyright">&copy; 2026 Villa Z1. All rights reserved. Created in tribute to those who built before us.</p>
             <div class="footer-links">
-              <a href="https://share.google/7hyYTBvJG9kWLYcpJ" target="_blank" rel="noopener">Location Map</a>
-              <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener">Booking Details</a>
+              <a href="https://share.google/7hyYTBvJG9kWLYcpJ" target="_blank" rel="noopener" data-i18n="foot_map">Location Map</a>
+              <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener" data-i18n="foot_details">Booking Details</a>
             </div>
           </div>
         </div>

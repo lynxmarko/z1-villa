@@ -12,7 +12,7 @@
   <link rel="stylesheet" href="/index.css">
   <script type="module" src="/gallery.js"></script>
 </head>
-<body data-active-theme="dark">
+<body data-active-theme="alabaster">
 
   <!-- Header -->
   <header id="main-header" class="scrolled">
@@ -20,15 +20,23 @@
       <img src="/assets/logo/villa-z1-logo.png" alt="Villa Z1 Logo" class="logo-img">
     </a>
     <nav class="nav-menu">
-      <a href="/#hero" class="nav-item">Home</a>
-      <a href="/#story-start" class="nav-item">The Story</a>
-      <a href="/#zones-section" class="nav-item">The Zones</a>
-      <a href="#" class="nav-item active">Gallery</a>
-      <a href="/#contact" class="nav-item">Contact</a>
+      <a href="/#hero" class="nav-item" data-i18n="nav_home">Home</a>
+      <a href="/#story-start" class="nav-item" data-i18n="nav_story">The Story</a>
+      <a href="/#zones-section" class="nav-item" data-i18n="nav_zones">The Zones</a>
+      <a href="#" class="nav-item active" data-i18n="nav_gallery">Gallery</a>
+      <a href="/#contact" class="nav-item" data-i18n="nav_contact">Contact</a>
     </nav>
     <div class="header-actions">
-      <a href="https://virtualtours.virtualno360.hr/F1Sb9odnx4" target="_blank" rel="noopener" class="btn btn-nav-ghost">360° Tour</a>
-      <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener" class="btn btn-nav-solid">Book Now</a>
+      <div class="lang-switcher-wrapper">
+        <select class="lang-select" aria-label="Select Language">
+          <option value="en">EN</option>
+          <option value="hr">HR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
+      <a href="/tour.html" class="btn btn-nav-ghost" data-i18n="nav_tour">360° Tour</a>
+      <a href="/#contact" class="btn btn-nav-solid" data-i18n="nav_book">Book Now</a>
     </div>
   </header>
 
@@ -36,19 +44,19 @@
   <main class="gallery-page">
     <section class="gallery-hero">
       <div class="container text-center">
-        <span class="section-label">VISUAL RETROSPECTIVE</span>
-        <h1 class="gallery-title">A Story Told in Details</h1>
-        <p class="gallery-subtitle">
+        <span class="section-label" data-i18n="gal_label">VISUAL RETROSPECTIVE</span>
+        <h1 class="gallery-title" data-i18n="gal_title">A Story Told in Details</h1>
+        <p class="gallery-subtitle" data-i18n="gal_desc">
           Every perspective of Villa Z1 was designed to capture light, space, and comfort. Browse through our curated collections to experience the villa before you arrive.
         </p>
         
         <!-- Filter Bar -->
         <div class="gallery-filters">
-          <button class="filter-btn active" data-filter="all">All Collections</button>
-          <button class="filter-btn" data-filter="exterior">Exterior & Pool</button>
-          <button class="filter-btn" data-filter="interior">Living spaces</button>
-          <button class="filter-btn" data-filter="bedrooms">Bedrooms</button>
-          <button class="filter-btn" data-filter="details">Amenities</button>
+          <button class="filter-btn active" data-filter="all" data-i18n="gal_filter_all">All Collections</button>
+          <button class="filter-btn" data-filter="exterior" data-i18n="gal_filter_ext">Exterior & Pool</button>
+          <button class="filter-btn" data-filter="interior" data-i18n="gal_filter_int">Living spaces</button>
+          <button class="filter-btn" data-filter="bedrooms" data-i18n="gal_filter_bed">Bedrooms</button>
+          <button class="filter-btn" data-filter="details" data-i18n="gal_filter_det">Amenities</button>
         </div>
       </div>
     </section>
@@ -59,9 +67,9 @@
 
         <!-- CATEGORY: EXTERIOR -->
         <div class="gallery-chapter-header" data-cat="exterior">
-          <span class="cat-num">COLLECTION I</span>
-          <h2 class="cat-title">The Exterior & Infinity Pool</h2>
-          <p class="cat-desc">Architectural lines blending into the natural contours of the Imotski valley. Features our signature heated infinity pool, manicured olive gardens, and outdoor lounge retreats.</p>
+          <span class="cat-num" data-i18n="gal_c1_num">COLLECTION I</span>
+          <h2 class="cat-title" data-i18n="gal_c1_title">The Exterior & Infinity Pool</h2>
+          <p class="cat-desc" data-i18n="gal_c1_desc">Architectural lines blending into the natural contours of the Imotski valley. Features our signature heated infinity pool, manicured olive gardens, and outdoor lounge retreats.</p>
         </div>
         
         <div class="gallery-masonry" data-cat="exterior">
@@ -101,9 +109,9 @@
 
         <!-- CATEGORY: INTERIOR -->
         <div class="gallery-chapter-header" data-cat="interior">
-          <span class="cat-num">COLLECTION II</span>
-          <h2 class="cat-title">The Living Spaces & Kitchen</h2>
-          <p class="cat-desc">A bright, open-plan sanctuary designed to invite natural light. High-end materials, custom furniture, and direct connections to the pool deck ensure effortless transitions.</p>
+          <span class="cat-num" data-i18n="gal_c2_num">COLLECTION II</span>
+          <h2 class="cat-title" data-i18n="gal_c2_title">The Living Spaces & Kitchen</h2>
+          <p class="cat-desc" data-i18n="gal_c2_desc">A bright, open-plan sanctuary designed to invite natural light. High-end materials, custom furniture, and direct connections to the pool deck ensure effortless transitions.</p>
         </div>
         
         <div class="gallery-masonry" data-cat="interior">
@@ -131,9 +139,9 @@
 
         <!-- CATEGORY: BEDROOMS -->
         <div class="gallery-chapter-header" data-cat="bedrooms">
-          <span class="cat-num">COLLECTION III</span>
-          <h2 class="cat-title">The Private Sanctuaries</h2>
-          <p class="cat-desc">5 bedrooms and 7 bathrooms, offering absolute privacy, wooden paneling, custom-framed artwork, and expansive views of the Dalmatian hills.</p>
+          <span class="cat-num" data-i18n="gal_c3_num">COLLECTION III</span>
+          <h2 class="cat-title" data-i18n="gal_c3_title">The Private Sanctuaries</h2>
+          <p class="cat-desc" data-i18n="gal_c3_desc">5 bedrooms and 7 bathrooms, offering absolute privacy, wooden paneling, custom-framed artwork, and expansive views of the Dalmatian hills.</p>
         </div>
         
         <div class="gallery-masonry" data-cat="bedrooms">
@@ -161,9 +169,9 @@
 
         <!-- CATEGORY: DETAILS -->
         <div class="gallery-chapter-header" data-cat="details">
-          <span class="cat-num">COLLECTION IV</span>
-          <h2 class="cat-title">The Amenities & Curated Details</h2>
-          <p class="cat-desc">A dedication to modern comfort. Our state-of-the-art gym, indoor wellness spa featuring a sauna and jacuzzi, games room, and smart-home components.</p>
+          <span class="cat-num" data-i18n="gal_c4_num">COLLECTION IV</span>
+          <h2 class="cat-title" data-i18n="gal_c4_title">The Amenities & Curated Details</h2>
+          <p class="cat-desc" data-i18n="gal_c4_desc">A dedication to modern comfort. Our state-of-the-art gym, indoor wellness spa featuring a sauna and jacuzzi, games room, and smart-home components.</p>
         </div>
         
         <div class="gallery-masonry" data-cat="details">
@@ -197,13 +205,13 @@
     </section>
 
     <!-- Call to Action back to Home -->
-    <section class="gallery-cta" data-theme="dark">
+    <section class="gallery-cta" data-theme="alabaster">
       <div class="container text-center">
-        <h3 class="cta-title">Ready to Experience Villa Z1?</h3>
-        <p class="cta-desc">Return to our legacy story or book your reservation directly.</p>
+        <h3 class="cta-title" data-i18n="gal_cta_title">Ready to Experience Villa Z1?</h3>
+        <p class="cta-desc" data-i18n="gal_cta_desc">Return to our legacy story or book your reservation directly.</p>
         <div class="cta-buttons">
-          <a href="/" class="btn btn-secondary">Back to Story</a>
-          <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener" class="btn btn-primary">Book Now</a>
+          <a href="/" class="btn btn-secondary" data-i18n="gal_cta_back">Back to Story</a>
+          <a href="/#contact" class="btn btn-primary" data-i18n="nav_book">Book Now</a>
         </div>
       </div>
     </section>

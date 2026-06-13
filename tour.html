@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Villa Z1 | Virtual Tour - Immersive Walkthrough</title>
+  <meta name="description" content="Experience an immersive room-by-room walkthrough of Villa Z1. Walk from the scenic outdoors into the pool terrace, living rooms, bedrooms, and spa, before exploring in full interactive 3D.">
+  <link rel="icon" type="image/png" href="/assets/logo/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/index.css">
+  <script type="module" src="/tour.js"></script>
+</head>
+<body class="tour-page" data-active-theme="dark">
+
+  <!-- Header -->
+  <header id="main-header" class="scrolled">
+    <a href="/" class="logo-link" id="header-logo" aria-label="Villa Z1 Home">
+      <img src="/assets/logo/villa-z1-logo.png" alt="Villa Z1 Logo" class="logo-img">
+    </a>
+    <nav class="nav-menu">
+      <a href="/#hero" class="nav-item" data-i18n="nav_home">Home</a>
+      <a href="/#story-start" class="nav-item" data-i18n="nav_story">The Story</a>
+      <a href="/#zones-section" class="nav-item" data-i18n="nav_zones">The Zones</a>
+      <a href="/gallery.html" class="nav-item" data-i18n="nav_gallery">Gallery</a>
+      <a href="/#contact" class="nav-item" data-i18n="nav_contact">Contact</a>
+    </nav>
+    <div class="header-actions">
+      <div class="lang-switcher-wrapper">
+        <select class="lang-select" aria-label="Select Language">
+          <option value="en">EN</option>
+          <option value="hr">HR</option>
+          <option value="de">DE</option>
+          <option value="it">IT</option>
+        </select>
+      </div>
+      <a href="#" class="btn btn-nav-ghost active" data-i18n="nav_tour">360° Tour</a>
+      <a href="/#contact" class="btn btn-nav-solid" data-i18n="nav_book">Book Now</a>
+    </div>
+  </header>
+
+  <!-- Pinned Scroll Walkthrough Screen -->
+  <section id="walkthrough-pin-section">
+    <div class="wt-viewport">
+      
+      <!-- Room Slides (Backgrounds) -->
+      <div class="wt-slides-container">
+        <!-- 1. Approach -->
+        <div class="wt-slide active" data-index="0">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/1-%20eksterijer%20i%20bazen%20-%20dron-%20dnevne/3-holiday-home-croatia-aerial-landscape-panorama.jpg" alt="Villa Z1 Aerial Landscape View" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 2. Pool Terrace -->
+        <div class="wt-slide" data-index="1">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/1-%20eksterijer%20i%20bazen/9-holiday-home-croatia-infinity-pool-valley-view.jpg" alt="Heated Infinity Pool Deck" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 3. Outdoor Lounge -->
+        <div class="wt-slide" data-index="2">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/1-%20eksterijer%20i%20bazen/1-villa-z1-imotski-outdoor-dining-infinity-pool.jpg" alt="Al-fresco Summer Kitchen & Dining" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 4. Open Living Area -->
+        <div class="wt-slide" data-index="3">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/2-%20interijer%20-%20dnevni%20boravak%20i%20kuhinja/1-villa-z1-croatia-living-room-pool-view.jpg" alt="Living Room Pool View" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 5. Dining & Kitchen -->
+        <div class="wt-slide" data-index="4">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/2-%20interijer%20-%20dnevni%20boravak%20i%20kuhinja/2-luxury-villa-imotski-interior-dining-kitchen.jpg" alt="Dining Room and Modern Kitchen" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 6. Corridor & Art -->
+        <div class="wt-slide" data-index="5">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/4-%20sadrz%CC%8Caji%20i%20detalji/10-holiday-home-imotski-interior-hallway-art.jpg" alt="Interior Hallway & Framed Art" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 7. Master Sanctuary -->
+        <div class="wt-slide" data-index="6">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/3-%20spavace%20sobe%20i%20kupaonice/11-villa-z1-croatia-master-bedroom-wood-panel-2.jpg" alt="Master Suite and Wood Paneling" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 8. Wellness Spa -->
+        <div class="wt-slide" data-index="7">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/4-%20sadrz%CC%8Caji%20i%20detalji/6-villa-z1-imotski-spa-jacuzzi-area.jpg" alt="Heated Wellness Spa Jacuzzi" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 9. Finnish Sauna -->
+        <div class="wt-slide" data-index="8">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/4-%20sadrz%CC%8Caji%20i%20detalji/8-luxury-villa-imotski-sauna-interior.jpg" alt="Finnish Dry Sauna Room" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+        <!-- 10. Games Room -->
+        <div class="wt-slide" data-index="9">
+          <img src="https://tuusfy7mmt3hpg2y.public.blob.vercel-storage.com/4-%20sadrz%CC%8Caji%20i%20detalji/9-villa-z1-croatia-billiards-games-room.jpg" alt="Games Lounge and Billiards" class="wt-slide-img">
+          <div class="wt-slide-overlay"></div>
+        </div>
+      </div>
+
+      <!-- HUD & Navigation controls -->
+      <div class="wt-hud">
+        <a href="#360-interactive" class="btn wt-skip-btn" data-i18n="wt_btn_skip">Skip Walkthrough</a>
+        
+        <div class="wt-progress-dots" role="tablist" aria-label="Walkthrough rooms tracker">
+          <button class="wt-dot active" data-index="0" aria-label="1. Scenic Approach"></button>
+          <button class="wt-dot" data-index="1" aria-label="2. Pool Terrace"></button>
+          <button class="wt-dot" data-index="2" aria-label="3. Outdoor Kitchen"></button>
+          <button class="wt-dot" data-index="3" aria-label="4. Open Living Room"></button>
+          <button class="wt-dot" data-index="4" aria-label="5. Dining & Kitchen"></button>
+          <button class="wt-dot" data-index="5" aria-label="6. Upstairs Corridor"></button>
+          <button class="wt-dot" data-index="6" aria-label="7. Master Suite"></button>
+          <button class="wt-dot" data-index="7" aria-label="8. Wellness Spa"></button>
+          <button class="wt-dot" data-index="8" aria-label="9. Finnish Sauna"></button>
+          <button class="wt-dot" data-index="9" aria-label="10. Games Room"></button>
+        </div>
+        
+        <div class="wt-scroll-hint">
+          <span data-i18n="wt_scroll_hint">Scroll to walk forward</span>
+          <div class="wt-scroll-line"></div>
+        </div>
+      </div>
+
+      <!-- Floating Text Cards (Descriptions) -->
+      <div class="wt-text-viewport">
+        <!-- 1. Approach -->
+        <div class="wt-text-card active" data-index="0">
+          <span class="wt-chapter" data-i18n="wt_s1_chap">STEP 01 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s1_title">Bespoke Scenic Approach</h3>
+          <p class="wt-desc" data-i18n="wt_s1_desc">Arrive at Villa Z1, nestled along the peaceful hills of the Imotski valley. Walk down the private road towards a sanctuary crafted over generations.</p>
+        </div>
+        <!-- 2. Pool Terrace -->
+        <div class="wt-text-card" data-index="1">
+          <span class="wt-chapter" data-i18n="wt_s2_chap">STEP 02 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s2_title">The Infinity Pool Deck</h3>
+          <p class="wt-desc" data-i18n="wt_s2_desc">Step onto the outdoor sun terrace. The heated infinity pool features counter-current swimming, a geyser, and active hydromassage jets blending into mountain lines.</p>
+        </div>
+        <!-- 3. Outdoor Lounge -->
+        <div class="wt-text-card" data-index="2">
+          <span class="wt-chapter" data-i18n="wt_s3_chap">STEP 03 / 10</span>
+          <h3 class="wt-title">Summer Kitchen & Grill</h3>
+          <p class="wt-desc">Walk into the summer dining pavilion. Outfitted with a premium gas grill, prep counter, and al-fresco dining table, this space is built for long dinners.</p>
+        </div>
+        <!-- 4. Open Living Area -->
+        <div class="wt-text-card" data-index="3">
+          <span class="wt-chapter" data-i18n="wt_s4_chap">STEP 04 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s4_title">Open-Plan Living Flow</h3>
+          <p class="wt-desc" data-i18n="wt_s4_desc">Cross the threshold indoors. Huge floor-to-ceiling glass sliding doors dissolve the boundaries between the living room comfort and the outdoor pool terrace.</p>
+        </div>
+        <!-- 5. Dining & Kitchen -->
+        <div class="wt-text-card" data-index="4">
+          <span class="wt-chapter" data-i18n="wt_s5_chap">STEP 05 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s5_title">Dining Sanctuary & Kitchen</h3>
+          <p class="wt-desc" data-i18n="wt_s5_desc">Pass the dining table to view the minimalist kitchen. Clean lines, state-of-the-art appliances, and custom oak styling create a perfect space for culinary art.</p>
+        </div>
+        <!-- 6. Corridor & Art -->
+        <div class="wt-text-card" data-index="5">
+          <span class="wt-chapter" data-i18n="wt_s6_chap">STEP 06 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s6_title">Private Corridor & Gallery</h3>
+          <p class="wt-desc" data-i18n="wt_s6_desc">Ascend the central architectural floating stairs into the hallway. The private corridors display custom-framed art and lead to quiet bedroom zones.</p>
+        </div>
+        <!-- 7. Master Sanctuary -->
+        <div class="wt-text-card" data-index="6">
+          <span class="wt-chapter" data-i18n="wt_s7_chap">STEP 07 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s7_title">Master Sleeping Suites</h3>
+          <p class="wt-desc" data-i18n="wt_s7_desc">Step into the master bedroom. Outfitted with bespoke wooden wall paneling, rich textures, and wide windows framing the valley, this is a zone of recovery.</p>
+        </div>
+        <!-- 8. Wellness Spa -->
+        <div class="wt-text-card" data-index="7">
+          <span class="wt-chapter" data-i18n="wt_s8_chap">STEP 08 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s8_title">Indoor Wellness Spa</h3>
+          <p class="wt-desc" data-i18n="wt_s8_desc">Descend to the ground-floor spa retreat. Unwind inside our premium heated indoor jacuzzi, complete with ambient relaxation lighting.</p>
+        </div>
+        <!-- 9. Finnish Sauna -->
+        <div class="wt-text-card" data-index="8">
+          <span class="wt-chapter" data-i18n="wt_s9_chap">STEP 09 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s9_title">Finnish Dry Sauna</h3>
+          <p class="wt-desc" data-i18n="wt_s9_desc">Step into the adjacent Finnish dry sauna. Crafted in dark cedar wood, it offers the ultimate physical detox and mental clarity.</p>
+        </div>
+        <!-- 10. Games Room -->
+        <div class="wt-text-card" data-index="9">
+          <span class="wt-chapter" data-i18n="wt_s10_chap">STEP 10 / 10</span>
+          <h3 class="wt-title" data-i18n="wt_s10_title">Entertainment Lounge</h3>
+          <p class="wt-desc" data-i18n="wt_s10_desc">Complete your journey inside our entertainment lounge. Play a round of pool, table tennis, or enjoy local wines at the private bar.</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Final 3D Tour Frame -->
+  <section id="360-interactive" class="wt-final-frame">
+    <div class="container text-center">
+      <h2 class="wt-final-title" data-i18n="wt_arrived">You Have Arrived</h2>
+      <p class="wt-final-desc" data-i18n="wt_arrived_desc">Explore the entire villa on your own terms. Drag to look around in 360°, tap hotspots to navigate rooms, and discover every detail in 3D.</p>
+      
+      <div class="tour-iframe-wrapper">
+        <iframe src="https://virtualtours.virtualno360.hr/F1Sb9odnx4" allowfullscreen="true" loading="lazy" class="tour-iframe" title="Interactive 360 Virtual Tour"></iframe>
+      </div>
+      
+      <div class="wt-final-actions">
+        <a href="/" class="btn btn-secondary" data-i18n="gal_cta_back">Back to Story</a>
+        <a href="/#contact" class="btn btn-primary" data-i18n="book_btn">Request Booking</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer id="main-footer" data-theme="dark">
+    <div class="container">
+      <div class="footer-top">
+        <img src="/assets/logo/villa-z1-logo.png" alt="Villa Z1" class="footer-logo">
+        <p class="footer-tagline">One villa. Endless zones.</p>
+      </div>
+      <div class="footer-bottom">
+        <p class="footer-copyright">&copy; 2026 Villa Z1. All rights reserved. Created in tribute to those who built before us.</p>
+        <div class="footer-links">
+          <a href="https://share.google/7hyYTBvJG9kWLYcpJ" target="_blank" rel="noopener">Location Map</a>
+          <a href="https://www.booking.com/hotel/hr/villa-z1-imotski-luxury-retreat-with-heated-pool-amp-spa.hr.html" target="_blank" rel="noopener">Booking Details</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>

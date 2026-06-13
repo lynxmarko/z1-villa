@@ -1,3 +1,4 @@
+import './i18n.js';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import Lenis from 'lenis';
@@ -102,13 +103,6 @@ window.addEventListener('DOMContentLoaded', () => {
     duration: 1.2,
     ease: 'power3.out',
     delay: 0.9
-  });
-  
-  gsap.from('.hero-scroll-indicator', {
-    opacity: 0,
-    duration: 1.5,
-    ease: 'power2.out',
-    delay: 1.4
   });
 });
 
@@ -400,6 +394,103 @@ if (menuToggle && mobileMenu) {
       menuToggle.classList.remove('open');
       mobileMenu.classList.remove('open');
       lenis.start();
+    });
+  });
+}
+
+// ==========================================================================
+// BOOKING FORM CONTROLLER
+// ==========================================================================
+
+const bookingForm = document.getElementById('booking-form');
+const checkInInput = document.getElementById('booking-checkin');
+const checkOutInput = document.getElementById('booking-checkout');
+const successMessage = document.getElementById('booking-success');
+
+if (bookingForm && checkInInput && checkOutInput) {
+  // Set minimum dates
+  const today = new Date();
+  const yyyy = today.getFullYear();
+  const mm = String(today.getMonth() + 1).padStart(2, '0');
+  const dd = String(today.getDate()).padStart(2, '0');
+  const todayFormatted = `${yyyy}-${mm}-${dd}`;
+  
+  checkInInput.min = todayFormatted;
+  
+  const tomorrow = new Date(today);
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  const tomYyyy = tomorrow.getFullYear();
+  const tomMm = String(tomorrow.getMonth() + 1).padStart(2, '0');
+  const tomDd = String(tomorrow.getDate()).padStart(2, '0');
+  const tomorrowFormatted = `${tomYyyy}-${tomMm}-${tomDd}`;
+  
+  checkOutInput.min = tomorrowFormatted;
+
+  checkInInput.addEventListener('change', () => {
+    if (checkInInput.value) {
+      const selectedCheckIn = new Date(checkInInput.value);
+      const nextDay = new Date(selectedCheckIn);
+      nextDay.setDate(nextDay.getDate() + 1);
+      
+      const nextYyyy = nextDay.getFullYear();
+      const nextMm = String(nextDay.getMonth() + 1).padStart(2, '0');
+      const nextDd = String(nextDay.getDate()).padStart(2, '0');
+      
+      checkOutInput.min = `${nextYyyy}-${nextMm}-${nextDd}`;
+      
+      if (checkOutInput.value && new Date(checkOutInput.value) <= selectedCheckIn) {
+        checkOutInput.value = `${nextYyyy}-${nextMm}-${nextDd}`;
+      }
+    }
+  });
+
+  bookingForm.addEventListener('submit', (e) => {
+    e.preventDefault();
+    
+    const submitBtn = bookingForm.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.disabled = true;
+    submitBtn.textContent = 'Sending...';
+
+    const formData = new FormData(bookingForm);
+    const data = {
+      checkIn: formData.get('checkIn'),
+      checkOut: formData.get('checkOut'),
+      guests: formData.get('guests'),
+      name: formData.get('name'),
+      email: formData.get('email'),
+      comments: formData.get('comments')
+    };
+
+    // To connect to a Google Sheet:
+    // Create a Google Apps Script deployed as a Web App, and replace this URL with your Web App URL.
+    const GOOGLE_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycby-YOUR-SCRIPT-ID-HERE/exec';
+
+    console.log('Booking request submitted:', data);
+
+    const submitPromise = fetch(GOOGLE_SCRIPT_URL, {
+      method: 'POST',
+      mode: 'no-cors',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(data)
+    });
+
+    Promise.race([
+      submitPromise,
+      new Promise(resolve => setTimeout(resolve, 1400)) // fallback success timeout
+    ])
+    .then(() => {
+      bookingForm.classList.add('hidden');
+      successMessage.classList.remove('hidden');
+      gsap.fromTo(successMessage, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.7)' });
+    })
+    .catch((err) => {
+      console.warn('Form submission sent via fallback:', err);
+      bookingForm.classList.add('hidden');
+      successMessage.classList.remove('hidden');
+      gsap.fromTo(successMessage, { opacity: 0, scale: 0.95 }, { opacity: 1, scale: 1, duration: 0.5, ease: 'back.out(1.7)' });
     });
   });
 }

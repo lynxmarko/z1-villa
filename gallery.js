@@ -1,3 +1,4 @@
+import './i18n.js';
 import Lenis from 'lenis';
 
 // Initialize Lenis Smooth Scroll
