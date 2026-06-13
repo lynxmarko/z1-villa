@@ -110,41 +110,83 @@ window.addEventListener('DOMContentLoaded', () => {
 // DAY TO NIGHT SCROLL METAMORPHOSIS
 // ==========================================================================
 
-const dayNightTimeline = gsap.timeline({
-  scrollTrigger: {
-    trigger: '#day-night-transition',
-    start: 'top top',
-    end: '+=150%', // duration of scroll-pinning
-    scrub: true,
-    pin: true,
-    anticipatePin: 1
-  }
+const mm = gsap.matchMedia();
+
+mm.add("(min-width: 769px)", () => {
+  // Desktop: pin the section for a cinematic crossfade
+  const dayNightTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#day-night-transition',
+      start: 'top top',
+      end: '+=150%', // duration of scroll-pinning
+      scrub: true,
+      pin: true,
+      anticipatePin: 1
+    }
+  });
+
+  // Fade in the night image
+  dayNightTimeline.to('#day-night-transition .night-img', {
+    opacity: 1,
+    ease: 'none'
+  }, 0);
+
+  // Slide indicator knob
+  dayNightTimeline.to('#day-night-transition .ind-slider-knob', {
+    left: '100%',
+    ease: 'none'
+  }, 0);
+
+  // Dim day label, highlight night label
+  dayNightTimeline.to('#day-night-transition .ind-day', {
+    opacity: 0.4,
+    color: '#ffffff',
+    ease: 'none'
+  }, 0);
+
+  dayNightTimeline.to('#day-night-transition .ind-night', {
+    opacity: 1,
+    color: 'var(--accent-gold)',
+    ease: 'none'
+  }, 0);
 });
 
-// Fade in the night image
-dayNightTimeline.to('#day-night-transition .night-img', {
-  opacity: 1,
-  ease: 'none'
-}, 0);
+mm.add("(max-width: 768px)", () => {
+  // Mobile: crossfade as the user scrolls past, without locking/pinning scroll
+  const dayNightTimeline = gsap.timeline({
+    scrollTrigger: {
+      trigger: '#day-night-transition',
+      start: 'top 80%',
+      end: 'bottom 20%',
+      scrub: true
+    }
+  });
 
-// Slide indicator knob
-dayNightTimeline.to('#day-night-transition .ind-slider-knob', {
-  left: '100%',
-  ease: 'none'
-}, 0);
+  // Fade in the night image
+  dayNightTimeline.to('#day-night-transition .night-img', {
+    opacity: 1,
+    ease: 'none'
+  }, 0);
 
-// Dim day label, highlight night label
-dayNightTimeline.to('#day-night-transition .ind-day', {
-  opacity: 0.4,
-  color: '#ffffff',
-  ease: 'none'
-}, 0);
+  // Slide indicator knob
+  dayNightTimeline.to('#day-night-transition .ind-slider-knob', {
+    left: '100%',
+    ease: 'none'
+  }, 0);
 
-dayNightTimeline.to('#day-night-transition .ind-night', {
-  opacity: 1,
-  color: 'var(--accent-gold)',
-  ease: 'none'
-}, 0);
+  // Dim day label, highlight night label
+  dayNightTimeline.to('#day-night-transition .ind-day', {
+    opacity: 0.4,
+    color: '#ffffff',
+    ease: 'none'
+  }, 0);
+
+  dayNightTimeline.to('#day-night-transition .ind-night', {
+    opacity: 1,
+    color: 'var(--accent-gold)',
+    ease: 'none'
+  }, 0);
+});
 
 // ==========================================================================
 // THEME SCROLL SWITCHER (Fluid Background Transitions)

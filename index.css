@@ -2336,6 +2336,7 @@ body[data-active-theme="dark-warm"] .form-input {
 }
 
 .wt-dot {
+  position: relative;
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -2343,6 +2344,15 @@ body[data-active-theme="dark-warm"] .form-input {
   transition: all 0.3s ease;
   cursor: pointer;
   border: none;
+}
+
+.wt-dot::before {
+  content: '';
+  position: absolute;
+  top: -12px;
+  bottom: -12px;
+  left: -8px;
+  right: -8px;
 }
 
 .wt-dot.active {
@@ -2432,11 +2442,14 @@ body[data-active-theme="dark-warm"] .form-input {
     right: 20px;
     width: auto;
     max-width: none;
-    bottom: 80px;
+    bottom: 85px;
     top: auto;
     transform: none;
   }
   .wt-text-card {
+    position: absolute;
+    bottom: 0;
+    top: auto;
     padding: 24px;
     background: rgba(11, 10, 10, 0.85);
   }
